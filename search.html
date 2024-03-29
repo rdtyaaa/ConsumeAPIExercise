@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Football Odds</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark">
+    <!-- navbar -->
+
+    <nav
+      class="navbar bg-dark navbar-expand-lg bg-body-tertiary"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand display-6 fw-bold ms-4" href="#">OFFSIDE</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="league.html">League</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-semibold" href="search.html"
+                >Search</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- card -->
+    <div class="card w-75 m-auto mt-5 shadow-sm">
+      <div class="card-body">
+        <div class="header-card">
+          <div class="input-group mb-3 w-50 ms-auto me-auto">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Find a Players!"
+              aria-label="Find a Players!"
+              aria-describedby="button-addon2"
+              id="player-search-input"
+            />
+            <button class="btn btn-secondary" type="submit" onclick="search()">
+              Button
+            </button>
+          </div>
+          <hr />
+        </div>
+        <table
+          class="table table-sm bg-secondary table-striped table-borderless"
+        >
+          <thead>
+            <tr>
+              <th
+                scope="col"
+                colspan="2"
+                class="text-center"
+                id="player-name"
+              ></th>
+            </tr>
+            <tr>
+              <td
+                colspan="2"
+                class="text-center fst-italic fw-light"
+                id="player-team"
+              ></td>
+            </tr>
+          </thead>
+          <tbody id="table-content">
+            <tr></tr>
+            <tr>
+              <td class="text-center" colspan="2" id="player-img"></td>
+            </tr>
+            <tr>
+              <td>Player Number:</td>
+              <td id="player-num"></td>
+            </tr>
+            <tr>
+              <td>Player Position:</td>
+              <td id="player-pos"></td>
+            </tr>
+            <tr>
+              <td>Player Age:</td>
+              <td id="player-age"></td>
+            </tr>
+            <tr>
+              <td>Player Birthdate:</td>
+              <td id="player-birth"></td>
+            </tr>
+            <tr>
+              <td>Player Goals:</td>
+              <td id="player-g"></td>
+            </tr>
+            <tr>
+              <td>Player Assist:</td>
+              <td id="player-a"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js\scripts.js"></script>
+  </body>
+</html>
