@@ -40,12 +40,12 @@
               <a class="nav-link" href="league.html">League</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="standings.html">Standings</a>
+              <a class="nav-link active fw-semibold" href="standings.html"
+                >Standings</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link active fw-semibold" href="search.html"
-                >Search</a
-              >
+              <a class="nav-link" href="search.html">Search</a>
             </li>
           </ul>
         </div>
@@ -56,69 +56,51 @@
     <div class="card w-75 m-auto mt-5 shadow-sm">
       <div class="card-body">
         <div class="header-card">
-          <div class="input-group mb-3 w-50 ms-auto me-auto">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Find a Players!"
-              aria-label="Find a Players!"
-              aria-describedby="button-addon2"
-              id="player-search-input"
-            />
-            <button class="btn btn-secondary" type="submit" onclick="search()">
-              Button
+          <h1 class="d-inline h6 text-dark">League:</h1>
+
+          <!-- dropdown -->
+          <!-- <div class="dropdown d-inline text-center">
+            <button
+              class="btn btn-outline dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Countries
             </button>
-          </div>
+            <ul class="dropdown-menu" id="country-dropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div> -->
+          <select
+            class="form-select w-25 mt-2 bg-light"
+            aria-label="Default select example"
+            id="league-dropdown"
+          >
+            <option selected>Choose...</option>
+          </select>
           <hr />
         </div>
-        <table
-          class="table table-sm bg-secondary table-striped table-borderless"
-        >
+        <table class="table table-sm bg-secondary table-borderless">
           <thead>
             <tr>
-              <th
-                scope="col"
-                colspan="2"
-                class="text-center"
-                id="player-name"
-              ></th>
-            </tr>
-            <tr>
-              <td
-                colspan="2"
-                class="text-center fst-italic fw-light"
-                id="player-team"
-              ></td>
+              <th scope="col">Pos</th>
+              <th scope="col">Team</th>
+              <th scope="col">W</th>
+              <th scope="col">D</th>
+              <th scope="col">L</th>
+              <th scope="col">GF</th>
+              <th scope="col">GA</th>
+              <th scope="col">PTS</th>
             </tr>
           </thead>
           <tbody id="table-content">
-            <tr></tr>
             <tr>
-              <td class="text-center" colspan="2" id="player-img"></td>
-            </tr>
-            <tr>
-              <td>Player Number:</td>
-              <td id="player-num"></td>
-            </tr>
-            <tr>
-              <td>Player Position:</td>
-              <td id="player-pos"></td>
-            </tr>
-            <tr>
-              <td>Player Age:</td>
-              <td id="player-age"></td>
-            </tr>
-            <tr>
-              <td>Player Birthdate:</td>
-              <td id="player-birth"></td>
-            </tr>
-            <tr>
-              <td>Player Goals:</td>
-              <td id="player-g"></td>
-            </tr>
-            <tr>
-              <td>Player Assist:</td>
-              <td id="player-a"></td>
+              <td class="text-center" colspan="8">
+                Please select the League first!
+              </td>
             </tr>
           </tbody>
         </table>
